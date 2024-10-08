@@ -52,10 +52,10 @@ export const Nav = () => {
         <div className="bg-slate-200 p-4 rounded-r-sm top-0 left-0 w-3/5 h-full">
           <FontAwesomeIcon icon={['fas', 'arrow-left']} size="lg" className="p-1 hover:text-red-900" onClick={toggleMenu} />
           <ul className="space-y-2 ml-8">
-            <li><Link to="/" className="hover:text-red-900 my-5">Home</Link></li>
-            <li><Link to="/about" className="hover:text-red-900 my-5">About</Link></li>
-            <li><Link to="/contact" className="hover:text-red-900 my-5 hidden">Contact</Link></li>
-            <li><Link to="/bookshelf" className="hover:text-red-900 my-5 hidden">Bookshelf</Link></li>
+            <li><Link to="/" className="hover:text-red-900 my-5" onClick={toggleMenu}>Home</Link></li>
+            <li><Link to="/about" className="hover:text-red-900 my-5" onClick={toggleMenu}>About</Link></li>
+            <li><Link to="/contact" className="hover:text-red-900 my-5 hidden" onClick={toggleMenu}>Contact</Link></li>
+            <li><Link to="/bookshelf" className="hover:text-red-900 my-5 hidden" onClick={toggleMenu}>Bookshelf</Link></li>
           </ul>
         </div>
       </div>
