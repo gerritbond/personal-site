@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /** I like the idea of a custom scrollbar, but it's not really pleasing to the eye. Needs work before I use this. */
+  .scrollbar::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(100 116 139 / var(--tw-bg-opacity));
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(100 116 139 / var(--tw-bg-opacity));
+  }
+
+    /* Up */
+  .scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-color: #555555;
+    height: 15px;
+  }
+
+  .scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-color: #333333;
+    height: 15px;
+  }
+  /* Down */
+  .scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-color: #555555;
+    height: 15px;
+  }
+
+  .scrollbar::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    background-color: #333333;
+    height: 15px;
+  }
+
+
+  .shadow-inset-gradient {
+    box-shadow: inset 0 0 20px 20px rgba(0, 0, 0, 0.05),
+            inset 0 0 20px 20px rgba(0, 0, 0, 0.05),
+            inset 0 0 20px 20px rgba(0, 0, 0, 0.05);
+  }
+}
+
+

@@ -4,7 +4,11 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'protest-strike': ['Protest Strike', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
