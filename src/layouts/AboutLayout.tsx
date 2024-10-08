@@ -1,3 +1,7 @@
+const ActionButton = ({href, text, download=false}: {href: string, text: string, download?: boolean}) => {
+  return <a href={href} download={download} className="w-full lg:w-auto px-8 py-3 my-1 rounded-md bg-red-800 text-white hover:bg-red-900 text-center">{text}</a>
+}
+
 const Introduction = () => {
   return <div className="grid grid-cols-1 lg:grid-cols-2">
       <div className="col-span-1 p-3 block lg:hidden">
@@ -13,9 +17,9 @@ const Introduction = () => {
         In recent years, I've been focusing on growing my managerial skills as an Engineering Manager, while still keeping my tech skills sharp in the off hours through hobby projects, and collaboration with various friends. Most recently, I've been working on an application to back our ongoing <a href="https://www.drivethrurpg.com/en/product/230009/stars-without-number-revised-edition-free-version/" target="_blank">Stars Without Numbers</a> campaign.
         <br/><br/>
         If you want to chat about opportunities, or discuss the latest going-ons in our home games please feel free to reach out!
-        <div className="flex flex-row justify-center mt-16">
-          <a href="mailto:gerritbond+sitecontact@gmail.com" className="px-8 py-3 rounded-md bg-red-800 text-white hover:bg-red-900 text-center">Send Me a Note</a>
-          <a href="/gerritbond-resume-norefs-202410.pdf" download className="px-8 py-3 ml-3 rounded-md bg-red-800 text-white hover:bg-red-900 text-center">Get my Resume</a>
+        <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center mt-16">
+          <ActionButton href="mailto:gerritbond+sitecontact@gmail.com" text="Send Me a Note" />
+          <ActionButton href="/gerritbond-resume-norefs-202410.pdf" download text="Get my Resume" />
         </div>
       </div>
       <div className="col-span-1 p-10 ml-10 hidden lg:block">
